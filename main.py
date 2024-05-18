@@ -2,8 +2,8 @@ import random
 from tkinter import *
 from tkinter import ttk
 
-
 count = 0
+
 
 def choose_pairs(lst):
     results = {}
@@ -47,17 +47,11 @@ def reveal():
         nextbutton.configure(state=DISABLED)
     count += 1
 
-cont = ['Patrick', 'Julian', 'Atle', 'Jesper', 'Håkon', 'Robin', 'Simen', 'Darko', 'Nikolai']
+
+cont = ['Example', 'Example2']
 custom_messages = {
-    'Patrick': '',
-    'Julian': '',
-    'Atle': '',
-    'Jesper': '',
-    'Håkon': '',
-    'Robin': '',
-    'Simen': '',
-    'Darko': 'Drugs or alcohol? No tnx',
-    'Nikolai': ''
+    'Example': '',
+    'Example2': ''
 }
 print("input = ", cont)
 
@@ -70,7 +64,7 @@ frm.grid()
 text1 = StringVar()
 text2 = StringVar()
 text3 = StringVar()
-textbox1 = Label(frm, textvariable=text1, font=("Calibri", 25))
+textbox1,  = Label(frm, textvariable=text1, font=("Calibri", 25))
 textbox1.grid(column=1, row=0)
 textbox2 = Label(frm, textvariable=text2, font=("Calibri", 25))
 textbox2.grid(column=1, row=1)
@@ -80,7 +74,5 @@ nextbutton = Button(frm, text="Next Person", command=show_next, font=("Calibri",
 nextbutton.grid(column=0, row=0)
 revealbutton = Button(frm, text="Reveal pick", command=reveal, font=("Calibri", 25))
 revealbutton.grid(column=0, row=1)
-
-
 
 root.mainloop()
